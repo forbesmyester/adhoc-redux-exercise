@@ -1,5 +1,6 @@
 export const INCREMENT_COUNTER = 'INCREMENT_COUNTER'
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
+export const INCREMENT_ODD_COUNTER = 'INCREMENT_ODD_COUNTER'
 
 export function increment() {
   return {
@@ -15,7 +16,8 @@ export function decrement() {
 
 export function incrementIfOdd() {
   return (dispatch, getState) => {
-    // TODO implement - dispatch if state is odd
+      var store = getState();
+      dispatch({ type: INCREMENT_ODD_COUNTER })
   }
 }
 
